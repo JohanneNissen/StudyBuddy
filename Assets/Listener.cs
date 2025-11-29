@@ -6,6 +6,7 @@ public class Listener : MonoBehaviour
 
 
     VMScript vmScript;
+    int switchCaseNR;
         
     void awake()
     {
@@ -21,15 +22,29 @@ public class Listener : MonoBehaviour
     
     void Update()
     {
-        if (vmScript.noiseVolume > 200 && vmScript.noiseVolume < 700) 
+        if(vmScript.noiseVolume < 200)
         {
-            Debug.Log("noise between 200-700"); 
+            switchCaseNR = 0;
+        }
+        else if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
+        {
+            switchCaseNR = 1;
+            Debug.Log("noise between 200-700");
 
         }
-        else if (vmScript.noiseVolume > 700 )
+        else if (vmScript.noiseVolume > 700)
         {
             Debug.Log("noise over 700");
 
         }
+
+        switch (switchCaseNR)
+        {
+            case 1:
+                break;
+
+            case 0;
+        }
+        
     }
 }
