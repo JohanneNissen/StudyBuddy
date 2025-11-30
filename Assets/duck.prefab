@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7440917453356993965}
   - component: {fileID: 7316052299342520340}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Duck Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 3419206299925044067}
   - component: {fileID: 8034426165542436651}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: DuckCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,7 +384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688a41aedd267624d8153d32026bb100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Listener
-  texbubbleUptime: 8
+  texbubbleUptime: 4
+  texbubbleDowntime: 10
+  text: {fileID: 7316052299342520340}
+  source: {fileID: 3825309821768172150}
 --- !u!82 &3825309821768172150
 AudioSource:
   m_ObjectHideFlags: 0
@@ -396,7 +399,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 299c8d4f3dd4b944bb21326fcd282a34, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4569718348426b1499bba735ebcd30d5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
