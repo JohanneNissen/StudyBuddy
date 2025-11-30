@@ -10,35 +10,33 @@ public class Listener : MonoBehaviour
 
     VMScript vmScript;
     int switchCaseNR;
-    public Canvas canvas;
+
+    Canvas canvas;
     TextMeshPro text;
-
-
-    private void Awake()
-    {
-        vmScript = GameObject.Find("Volume Manager").GetComponent<VMScript>();
-        text = canvas.GetComponent<TextMeshPro>();
-    }
 
 
     void Start()
     {
+        vmScript = GameObject.Find("Volume Manager").GetComponent<VMScript>();
+        canvas = gameObject.GetComponent<Canvas>();
+
         
-        if(!crHasStarted)
+
+        /*if (!crHasStarted)
         {
             
-            crHasStarted = true;
             text.enabled = true;
             StartCoroutine(ActivateSpeachBubble());
             
-        }
+        }*/
 
     }
 
     
     void Update()
     {
-        if(crHasStarted)
+        canvas.enabled = false;
+        /*if(crHasStarted)
         {
             text.enabled = true;
 
@@ -52,11 +50,11 @@ public class Listener : MonoBehaviour
                 text.text = " Noise above 700 ";
             }
 
-        }
+        }*/
 
-      
 
-        
+
+
     }
 
 
