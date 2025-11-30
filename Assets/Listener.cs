@@ -1,49 +1,70 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class Listener : MonoBehaviour
 {
-
+    public float texbubbleUptime = 10f;
+    private bool crHasStarted = false;
 
     VMScript vmScript;
     int switchCaseNR;
-        
-    
-    void Start()
+    public Canvas canvas;
+    TextMeshPro text;
+
+
+    private void Awake()
     {
         vmScript = GameObject.Find("Volume Manager").GetComponent<VMScript>();
+        text = canvas.GetComponent<TextMeshPro>();
+    }
+
+
+    void Start()
+    {
+        
+        if(!crHasStarted)
+        {
+            
+            crHasStarted = true;
+            text.enabled = true;
+            StartCoroutine(ActivateSpeachBubble());
+            
+        }
+
     }
 
     
     void Update()
     {
-        if(vmScript.noiseVolume < 200)
+        if(crHasStarted)
         {
-            switchCaseNR = 0;
-        }
-        else if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
-        {
-            switchCaseNR = 1;
-            
-        }
-        else if (vmScript.noiseVolume > 699)
-        {
-            switchCaseNR= 2;
+            text.enabled = true;
+
+            if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
+            {
+                
+
+            }
+            else if (vmScript.noiseVolume > 699)
+            {
+                text.text = " Noise above 700 ";
+            }
+
         }
 
-        switch (switchCaseNR)
-        {
-            case 0:
-                Debug.Log("noise below 200");
-                break;
+      
 
-            case 1:
-                Debug.Log("noise between 200-700");
-                break;
-            case 2:
-                Debug.Log("noise over 700");
-                break;
-        }
         
+    }
+
+
+    IEnumerator ActivateSpeachBubble()
+    {
+        yield return new WaitForSeconds(texbubbleUptime);
+        text.enabled = false;
+        crHasStarted = false;
+
     }
 }
