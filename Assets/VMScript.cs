@@ -1,67 +1,73 @@
 using UnityEngine;
-using System.IO.Ports;
+// using System.IO.Ports;
 
 public class VMScript : MonoBehaviour
 {
 
-    public string portName = "COM3";
-    public int baudRate = 9600;
-    private SerialPort port;
+    // public string portName = "COM3";
+    // public int baudRate = 9600;
+    // private SerialPort port;
 
     public int noiseVolume = 0;
     public int lightVolume = 0;
 
-    public int LEDstate = 1;
-    public int peak = 0;
+    // public int LEDstate = 1;
+    // public int peak = 0;
 
-    void Start()
-    {
-        try
-        {
-            port = new SerialPort(portName, baudRate); //set the port
-            port.ReadTimeout = 50; //If you don't find it in this amount of time move on
-            port.Open(); //Try to open the port
+    /*
+   void Start()
+   {
 
-        } catch (System.Exception e)
-        {
-            Debug.LogError("Could not open port: " + portName + " Error message: " + e);
-        }
-    }
+       try
+       {
+           port = new SerialPort(portName, baudRate); //set the port
+           port.ReadTimeout = 50; //If you don't find it in this amount of time move on
+           port.Open(); //Try to open the port
 
-    void Update()
-    {
-        if (port == null || !port.IsOpen) //If port is not available just stop
-        {
-            return;
-        }
+       } catch (System.Exception e)
+       {
+           Debug.LogError("Could not open port: " + portName + " Error message: " + e);
+       }
 
-        try
-        {
-            string data = port.ReadLine();
-            Debug.Log(data);
+   }
 
-            string[] dataParts = data.Split(',');
+   void Update()
+   {
+       /*
+       if (port == null || !port.IsOpen) //If port is not available just stop
+       {
+           return;
+       }
 
-            if (dataParts.Length == 0)
-            {
-                return;
-            }
+       try
+       {
+           string data = port.ReadLine();
+           Debug.Log(data);
 
-            string tag = dataParts[0];
+           string[] dataParts = data.Split(',');
 
-            if(tag == "SENSOR")
-            {
-                noiseVolume = int.Parse(dataParts[1]);
-                LEDstate = int.Parse(dataParts[2]);
+           if (dataParts.Length == 0)
+           {
+               return;
+           }
 
-            } else if(tag == "PEAK")
-            {
-                peak = int.Parse(dataParts[1]);
-            }
+           string tag = dataParts[0];
 
-        } catch (System.TimeoutException)
-        {
-            //Just catch the exeption
-        };
-    }
+           if(tag == "SENSOR")
+           {
+               noiseVolume = int.Parse(dataParts[1]);
+               LEDstate = int.Parse(dataParts[2]);
+
+           } else if(tag == "PEAK")
+           {
+               peak = int.Parse(dataParts[1]);
+           }
+
+       } catch (System.TimeoutException)
+       {
+           //Just catch the exeption
+       };
+   }
+       */
 }
+
