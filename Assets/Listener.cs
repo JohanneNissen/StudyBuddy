@@ -39,6 +39,7 @@ public class Listener : MonoBehaviour
         {
             StartCoroutine(ActivateSpeachBubble());
         }
+
     }
 
 
@@ -56,6 +57,16 @@ public class Listener : MonoBehaviour
         {
             source.Play();
             text.text = " Noise above 700 ";
+        }
+        else if (vmScript.lightVolume > 199 && vmScript.lightVolume < 700)
+        {
+            source.Play();
+            text.text = " light between 200-700 ";
+        }
+        else if (vmScript.lightVolume > 699)
+        {
+            source.Play();
+            text.text = " light above 700 ";
         }
 
         yield return new WaitForSeconds(texbubbleUptime);

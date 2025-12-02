@@ -9,6 +9,8 @@ public class VMScript : MonoBehaviour
     private SerialPort port;
 
     public int noiseVolume = 0;
+    public int lightVolume = 0;
+
     public int LEDstate = 1;
     public int peak = 0;
 
