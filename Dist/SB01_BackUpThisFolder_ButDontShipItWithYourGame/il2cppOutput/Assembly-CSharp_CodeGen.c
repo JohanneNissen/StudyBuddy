@@ -1,0 +1,99 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void LightIndicatorScript_Start_m453B1038E78CBE23EC3F393B95C4D7BDE8C12EDF (void);
+extern void LightIndicatorScript_Update_mD4D7A83527D5EC9F456148F388DB8EDB429E5FAC (void);
+extern void LightIndicatorScript__ctor_mA93C707D035ADE4E803B2C78F5B4857111B9DEE2 (void);
+extern void Listener_Start_m6070F246077B62D65839A681850735C26DC65E64 (void);
+extern void Listener_Update_m6C241137CF64C4020B37C01D8134FB199B727CAD (void);
+extern void Listener_ActivateSpeachBubble_m5731C2F1F815712009F634F5AED0F62992051217 (void);
+extern void Listener__ctor_mF4CCF0E31EAD67F1EDD8DB2EEF849E3C8F60032D (void);
+extern void U3CActivateSpeachBubbleU3Ed__9__ctor_m274AF411A1ED8F21B37110CDB74FDC9D27572009 (void);
+extern void U3CActivateSpeachBubbleU3Ed__9_System_IDisposable_Dispose_mB004BF4246205610D76CF045275AFE07B657D383 (void);
+extern void U3CActivateSpeachBubbleU3Ed__9_MoveNext_mC4308DD3778554770EE1680284F6A0861D182C9A (void);
+extern void U3CActivateSpeachBubbleU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB486FEEB28E34C12F4CB3C7CF78248AB423037D8 (void);
+extern void U3CActivateSpeachBubbleU3Ed__9_System_Collections_IEnumerator_Reset_m7ACFFF76F5E9FA5A17ABA15443EA0330D8886B07 (void);
+extern void U3CActivateSpeachBubbleU3Ed__9_System_Collections_IEnumerator_get_Current_m551FC64A4B38BEA683EAABAEC763874C68F89735 (void);
+extern void NoiseIndicatorScript_Start_mB7D6BD564E1ACF1B0CF5EF0A773909A9E95030C8 (void);
+extern void NoiseIndicatorScript_Update_m529EFB644ED2B7F3CDCB13F8A7F213C7B5E2AA29 (void);
+extern void NoiseIndicatorScript__ctor_mBAF9C4E24D1BA9723A66E1E48DC668FC394CEC24 (void);
+extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
+extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
+extern void VMScript__ctor_m85564EA4AE64BD71D17E279400AB6FFC1ED2B57F (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[21] = 
+{
+	LightIndicatorScript_Start_m453B1038E78CBE23EC3F393B95C4D7BDE8C12EDF,
+	LightIndicatorScript_Update_mD4D7A83527D5EC9F456148F388DB8EDB429E5FAC,
+	LightIndicatorScript__ctor_mA93C707D035ADE4E803B2C78F5B4857111B9DEE2,
+	Listener_Start_m6070F246077B62D65839A681850735C26DC65E64,
+	Listener_Update_m6C241137CF64C4020B37C01D8134FB199B727CAD,
+	Listener_ActivateSpeachBubble_m5731C2F1F815712009F634F5AED0F62992051217,
+	Listener__ctor_mF4CCF0E31EAD67F1EDD8DB2EEF849E3C8F60032D,
+	U3CActivateSpeachBubbleU3Ed__9__ctor_m274AF411A1ED8F21B37110CDB74FDC9D27572009,
+	U3CActivateSpeachBubbleU3Ed__9_System_IDisposable_Dispose_mB004BF4246205610D76CF045275AFE07B657D383,
+	U3CActivateSpeachBubbleU3Ed__9_MoveNext_mC4308DD3778554770EE1680284F6A0861D182C9A,
+	U3CActivateSpeachBubbleU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB486FEEB28E34C12F4CB3C7CF78248AB423037D8,
+	U3CActivateSpeachBubbleU3Ed__9_System_Collections_IEnumerator_Reset_m7ACFFF76F5E9FA5A17ABA15443EA0330D8886B07,
+	U3CActivateSpeachBubbleU3Ed__9_System_Collections_IEnumerator_get_Current_m551FC64A4B38BEA683EAABAEC763874C68F89735,
+	NoiseIndicatorScript_Start_mB7D6BD564E1ACF1B0CF5EF0A773909A9E95030C8,
+	NoiseIndicatorScript_Update_m529EFB644ED2B7F3CDCB13F8A7F213C7B5E2AA29,
+	NoiseIndicatorScript__ctor_mBAF9C4E24D1BA9723A66E1E48DC668FC394CEC24,
+	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
+	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	VMScript__ctor_m85564EA4AE64BD71D17E279400AB6FFC1ED2B57F,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[21] = 
+{
+	15336,
+	15336,
+	15336,
+	15336,
+	15336,
+	15141,
+	15336,
+	11616,
+	15336,
+	14949,
+	15141,
+	15336,
+	15141,
+	15336,
+	15336,
+	15336,
+	15336,
+	15336,
+	15336,
+	26260,
+	15336,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	21,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

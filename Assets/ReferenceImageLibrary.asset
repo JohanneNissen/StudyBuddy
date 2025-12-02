@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 4863309799767859248
       m_GuidHigh: 14940908519576551591
     m_SerializedTextureGuid:
-      m_GuidLow: 13408359936119680313
-      m_GuidHigh: 17053784771777979273
+      m_GuidLow: 5590275081729992474
+      m_GuidHigh: 2211285030137912858
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: duck
-    m_Texture: {fileID: 2800000, guid: 44fe2d391052ba1489e3ca25e536abec, type: 3}
+    m_Texture: {fileID: 2800000, guid: 7b3be71aa5914d941a5e82de0410b01e, type: 3}
