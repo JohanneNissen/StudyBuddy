@@ -17,7 +17,7 @@ public class NoiseIndicatorScript : MonoBehaviour
 
     void Update()
     {
-        vmScript.noiseVolume = Mathf.Clamp(vmScript.noiseVolume, 0, 700);
+        vmScript.noiseVolume = Mathf.Clamp(vmScript.noiseVolume, 0, 1028);
         float t = vmScript.noiseVolume / 700f;
         Color newColor = Color.Lerp(Color.green, Color.yellow, t);
         newColor = Color.Lerp(newColor, Color.red, t);
