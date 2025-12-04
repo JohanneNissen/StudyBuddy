@@ -12,8 +12,7 @@ public class VMScript : MonoBehaviour
     public int lightVolume = 0;
 
     // public int LEDstate = 1;
-    // public int peakSound = 0;
-    // public int peakLight = 0;
+    // public int peak = 0;
 
     /*
    void Start()
@@ -57,13 +56,11 @@ public class VMScript : MonoBehaviour
            if(tag == "SENSOR")
            {
                noiseVolume = int.Parse(dataParts[1]);
-               lightVolume = int.Parse(dataParts[2]
-               LEDstate = int.Parse(dataParts[3]);
+               LEDstate = int.Parse(dataParts[2]);
 
            } else if(tag == "PEAK")
            {
-               peakSound = int.Parse(dataParts[1]);
-               peakLight = int.Parse(dataParts[2]);
+               peak = int.Parse(dataParts[1]);
            }
 
        } catch (System.TimeoutException)
