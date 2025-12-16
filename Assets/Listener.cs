@@ -32,7 +32,7 @@ public class Listener : MonoBehaviour
     {
        
 
-        if (!crHasStarted && vmScript.noiseVolume > 199 || !crHasStarted && vmScript.lightVolume > 199)
+        if (!crHasStarted && vmScript.noiseVolume > 199 || !crHasStarted && vmScript.lightVolume < 199 || !crHasStarted && vmScript.lightVolume > 499)
         {
             StartCoroutine(ActivateSpeachBubble());
         }
@@ -48,11 +48,25 @@ public class Listener : MonoBehaviour
 
             if (vmScript.lightVolume < 200)
             {
-                if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
+            Debug.Log("imhere");
+                if (vmScript.noiseVolume < 200)
                 {
                     source.pitch = Random.Range(0.9f, 1.1f);
                     source.Play();
-                    text.text = "Your sorrounding light is fine at: " + vmScript.lightVolume.ToString() + "lm. However you should lower the noise around you. It is at: " + vmScript.noiseVolume.ToString() + "dB";
+                    text.text = "Your sorrounding light is too low at: " + vmScript.lightVolume.ToString() + "lx, which might strain your eyes.";
+
+                    yield return new WaitForSeconds(texbubbleUptime);
+                    canvas.SetActive(false);
+
+                    yield return new WaitForSeconds(texbubbleDowntime);
+                    crHasStarted = false;
+                }
+
+                else if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
+                {
+                    source.pitch = Random.Range(0.9f, 1.1f);
+                    source.Play();
+                    text.text = "Your sorrounding light is too low at: " + vmScript.lightVolume.ToString() + "lx, which might strain your eyes. You should also lower the ambient noise around you.";
 
                     yield return new WaitForSeconds(texbubbleUptime);
                     canvas.SetActive(false);
@@ -64,7 +78,7 @@ public class Listener : MonoBehaviour
                 {
                     source.pitch = Random.Range(0.9f, 1.1f);
                     source.Play();
-                    text.text = "Your sorrounding light is fine at: " + vmScript.lightVolume.ToString() + "lm. However you should drasticly lower the noise around you. It is at: " + vmScript.noiseVolume.ToString() + "dB";
+                    text.text = "Your sorrounding light is too low at: " + vmScript.lightVolume.ToString() + "lx, which might strain your eyes. You should also drasticly lower the ambient noise around you.";
 
                     yield return new WaitForSeconds(texbubbleUptime);
                     canvas.SetActive(false);
@@ -74,13 +88,42 @@ public class Listener : MonoBehaviour
                 }
             }
 
-            else if (vmScript.lightVolume > 199 && vmScript.lightVolume < 700)
+            else if (vmScript.lightVolume > 199 && vmScript.lightVolume < 500)
             {
-                if (vmScript.noiseVolume < 200)
+                 if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
                 {
                     source.pitch = Random.Range(0.9f, 1.1f);
                     source.Play();
-                    text.text = "Your sorrounding light should be lowered. It is at: " + vmScript.lightVolume.ToString() + "lm. However the noise around you is fine at: " + vmScript.noiseVolume.ToString() + "dB";
+                    text.text = "You should lower the ambient noise around you.";
+
+                    yield return new WaitForSeconds(texbubbleUptime);
+                    canvas.SetActive(false);
+
+                    yield return new WaitForSeconds(texbubbleDowntime);
+                    crHasStarted = false;
+                }
+                else
+                {
+                    source.pitch = Random.Range(0.9f, 1.1f);
+                    source.Play();
+                    text.text = "You should drasticly lower the ambient noise around you.";
+
+                yield return new WaitForSeconds(texbubbleUptime);
+                    canvas.SetActive(false);
+
+                    yield return new WaitForSeconds(texbubbleDowntime);
+                    crHasStarted = false;
+                }
+            }
+
+            else if (vmScript.lightVolume > 499)
+            {
+                if (vmScript.noiseVolume < 200)
+                {
+
+                    source.pitch = Random.Range(0.9f, 1.1f);
+                    source.Play();
+                    text.text = "Your sorrounding light should be drasticly lowered. It is at: " + vmScript.lightVolume.ToString() + "lx.";
 
                     yield return new WaitForSeconds(texbubbleUptime);
                     canvas.SetActive(false);
@@ -92,7 +135,7 @@ public class Listener : MonoBehaviour
                 {
                     source.pitch = Random.Range(0.9f, 1.1f);
                     source.Play();
-                    text.text = "Your sorrounding light should be lowered. It is at: " + vmScript.lightVolume.ToString() + "lm. You should also lower the noise around you. It is at: " + vmScript.noiseVolume.ToString() + "dB";
+                    text.text = "Your sorrounding light should be drasticly lowered. It is at: " + vmScript.lightVolume.ToString() + "lx. You should also lower the ambient noise around you.";
 
                     yield return new WaitForSeconds(texbubbleUptime);
                     canvas.SetActive(false);
@@ -104,48 +147,7 @@ public class Listener : MonoBehaviour
                 {
                     source.pitch = Random.Range(0.9f, 1.1f);
                     source.Play();
-                    text.text = "Your sorrounding light should be lowered. it is at: " + vmScript.lightVolume.ToString() + "lm. You should also drasticly lower the noise around you. It is at: " + vmScript.noiseVolume.ToString() + "dB";
-
-                    yield return new WaitForSeconds(texbubbleUptime);
-                    canvas.SetActive(false);
-
-                    yield return new WaitForSeconds(texbubbleDowntime);
-                    crHasStarted = false;
-                }
-            }
-
-            else if (vmScript.lightVolume > 699)
-            {
-                if (vmScript.noiseVolume < 200)
-                {
-
-                    source.pitch = Random.Range(0.9f, 1.1f);
-                    source.Play();
-                    text.text = "Your sorrounding light should be drasticly lowered. it is at: " + vmScript.lightVolume.ToString() + "lm. However the noise around you is fine at: " + vmScript.noiseVolume.ToString() + "dB";
-
-                    yield return new WaitForSeconds(texbubbleUptime);
-                    canvas.SetActive(false);
-
-                    yield return new WaitForSeconds(texbubbleDowntime);
-                    crHasStarted = false;
-                }
-                else if (vmScript.noiseVolume > 199 && vmScript.noiseVolume < 700)
-                {
-                    source.pitch = Random.Range(0.9f, 1.1f);
-                    source.Play();
-                    text.text = "Your sorrounding light should be drasticly lowered. it is at: " + vmScript.lightVolume.ToString() + "lm. You should also lower the noise around you. It is at: " + vmScript.noiseVolume.ToString() + "dB";
-
-                    yield return new WaitForSeconds(texbubbleUptime);
-                    canvas.SetActive(false);
-
-                    yield return new WaitForSeconds(texbubbleDowntime);
-                    crHasStarted = false;
-                }
-                else
-                {
-                    source.pitch = Random.Range(0.9f, 1.1f);
-                    source.Play();
-                    text.text = "Your sorrounding light should be drasticly lowered. it is at: " + vmScript.lightVolume.ToString() + "lm. You should also drasticly lower the noise around you. It is at: " + vmScript.noiseVolume.ToString() + "dB";
+                    text.text = "Your sorrounding light should be drasticly lowered. It is at: " + vmScript.lightVolume.ToString() + "lx. You should also drasticly lower the ambient noise around you.";
 
                     yield return new WaitForSeconds(texbubbleUptime);
                     canvas.SetActive(false);

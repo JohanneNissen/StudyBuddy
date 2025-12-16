@@ -598,8 +598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688a41aedd267624d8153d32026bb100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Listener
-  texbubbleUptime: 4
-  texbubbleDowntime: 4
+  texbubbleUptime: 15
+  texbubbleDowntime: 15
   text: {fileID: 7316052299342520340}
   source: {fileID: 3825309821768172150}
 --- !u!82 &3825309821768172150
