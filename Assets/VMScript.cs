@@ -37,7 +37,6 @@ public class VMScript : MonoBehaviour
 
    void Update()
    {
-        Debug.Log("Update is running");
         if (port == null || !port.IsOpen) //If port is not available just stop
        {
            return;
